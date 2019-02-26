@@ -28,6 +28,8 @@ router.get('/', function(req, res, next) {
 			"address": "台灣臺北市內湖區內湖路一段77-3號",
 			"memo": "",
 			"mobile_info": ""
+			"locationID":0,
+			"Offset":0,
 		}))
 	},function(error, response, body){
 		console.log("1");
