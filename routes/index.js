@@ -31,6 +31,8 @@ router.get('/pushcard', function(req, res, next) {
  			"latitude": (+25.083968+(+new Number(Math.random()*0.00076).toFixed(7))),
  			"address": "台灣臺北市內湖區內湖路一段"+(+Math.floor(Math.random()*20)+50)+"-"+(+Math.floor(Math.random()*8)+1)+"號",
 			"memo": "",
+			"locationID":0,
+			"Offset":0,
 			"mobile_info": ""
 		}))
 	},function(error, response, body){
