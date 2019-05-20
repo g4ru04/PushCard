@@ -5,6 +5,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+	res.render('entrance');
+});
+
+router.get('/pushcard', function(req, res, next) {
 	request.post({
 		url: "https://workflow.pershing.com.tw/WFMobileWeb/Service/eHRFlowMobileService.asmx/InsertCardData",
 		headers: {
@@ -20,16 +24,14 @@ router.get('/', function(req, res, next) {
 			"companyID": "1",
 			"account": "10506002",
 			"language": "zh-tw",
-			//"longitude": 121.5607264,
-			//"latitude": 25.0847327,
-			//"address": "台灣臺北市內湖區內湖路一段77-3號",
-			"longitude": (+121.560284+(+new Number(Math.random()*0.00048).toFixed(7))),
- 			"latitude": (+25.083968+(+new Number(Math.random()*0.00076).toFixed(7))),
- 			"address": "台灣臺北市內湖區內湖路一段"+(+Math.floor(Math.random()*20)+50)+"-"+(+Math.floor(Math.random()*8)+1)+"號",
+		// 	"longitude": 121.56542681,
+		// 	"latitude": 25.0329636,
+		// 	"address": "台灣臺北市信義區西村里8鄰信義路五段7號",
+			"longitude": 121.5607264,
+			"latitude": 25.0847327,
+			"address": "台灣臺北市內湖區內湖路一段77-3號",
 			"memo": "",
-			"mobile_info": "",
-			"locationID":0,
-			"Offset":0,
+			"mobile_info": ""
 		}))
 	},function(error, response, body){
 		console.log("1");
